@@ -6,12 +6,12 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-    <button type="button" id="messageButton">Click to send a message to the app</button>
+    <button type="button" id="messageButton">Click to send a message to the app-01</button>
   </body>
   <script type="text/javascript">
     // when the button is clicked, send a message to the app
     document.getElementById('messageButton').onclick = function() {
-      ThunkableWebviewerExtension.postMessage('hello world');
+      ThunkableWebviewerExtension.postMessage('hello world from Html');
     }
 
     // when we get a message from the app, display it on the page
