@@ -1,16 +1,20 @@
-window .ml = claudinary.createMediaLibrary({
-   cloud_name : 'ealalin2020' ,
-   api_key : '362758469977132' ,
-   username : 'ealalin1@gmail.com'  ,
-   button_class : 'myBtn'  ,
-   button_caption : 'Select Image or Video'   ,
-},{
-    insertHandler : function (data) {
-data.asset.forEach(asset=> {   console .log( "inserted 
-asset:"   ,
-JSON.stringify(asset,   null ,  2))})
+window.ml = cloudinary.createMediaLibrary({
+    cloud_name: 'ealalin2020',
+    api_key: '362758469977132',
+    username: 'ealalin1@gmail.com',
+    timestamp: '@ViewBag.unixTimestamp',
+ //   signature: '@ViewBag.signature',
+ //   uploadPreset: 'ugzdn0txw',
+    button_class: 'myBtn',
+    button_caption: 'Select Image or Video',
+    }, {
+    insertHandler: function (data) {
+    console.log("Hello World");
+    data.assets.forEach(asset => {
+    console.log("Inserted asset:",
+    JSON.stringify(asset, null, 2))
+    })
     }
     },
-    document .getElementByid( "open-btn")
-
-)
+    document.getElementById("open-btn")
+    )
