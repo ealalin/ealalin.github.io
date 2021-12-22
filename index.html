@@ -6,7 +6,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-01 </button> 
+   <button type="button" id="messageButton">Click to start-02</button> 
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -21,7 +21,7 @@
 
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
-      document.getElementById('messageDisplay').innerHTML = message;
+      let text = document.getElementById('messageDisplay').innerHTML = message;
      
       });
 
