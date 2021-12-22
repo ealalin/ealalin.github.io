@@ -9,10 +9,10 @@
     <button type="button" id="messageButton">Click to start-01</button>
   </body>
  <script type="text/javascript">
-    // when the button is clicked, send a message to the app
- //   document.getElementById('messageButton').onclick = function() {
-//      ThunkableWebviewerExtension.postMessage('hello world from Html');
- //   }
+    when the button is clicked, send a message to the app
+    document.getElementById('messageButton').onclick = function() {
+            ThunkableWebviewerExtension.postMessage('hello world from Html');
+    }
 
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
