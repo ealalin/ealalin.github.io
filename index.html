@@ -6,7 +6,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-03 </button> 
+   <button type="button" id="messageButton">Click to start-04 </button> 
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -23,6 +23,10 @@
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       let text = document.getElementById('messageDisplay').innerHTML = message;
       let result = text.substr(1, 11);
+      let cloud_name = result ;
+      let text = message;
+      let result = text.substr(13, 7);
+      let api_key_name = result ;
       });
 
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
