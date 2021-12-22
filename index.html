@@ -1,4 +1,4 @@
-<html>
+html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://thunkable.github.io/webviewer-extension/thunkableWebviewerExtension.js" type="text/javascript"></script>
@@ -6,7 +6,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-05</button> 
+   <button type="button" id="messageButton">Click to start-06</button> 
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -21,14 +21,14 @@
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       document.getElementById('messageDisplay').innerHTML = message;
-      let text = message;
-      let result = text.substr(1, 11);
-      let cloud_name = result ;
-      let text = message;
-      let result = text.substr(13, 7);
-      let api_key_name = result ;
-      document.getElementById('messageDisplay').innerHTML = cloud_name;
-      document.getElementById('messageDisplay').innerHTML = api_key_name; 
+    //  let text = message;
+    //  let result = text.substr(1, 11);
+    //  let cloud_name = result ;
+    //  let text = message;
+    //  let result = text.substr(13, 7);
+    //  let api_key_name = result ;
+    //  document.getElementById('messageDisplay').innerHTML = cloud_name;
+    //  document.getElementById('messageDisplay').innerHTML = api_key_name; 
     //  alert (cloud_name);
     //  alert(api_key_name); 
       });
