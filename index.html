@@ -6,10 +6,10 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-    <button type="button" id="messageButton">Click to start-02</button>
+    <button type="button" id="messageButton">Click to start-01</button>
   </body>
  <script type="text/javascript">
-    when the button is clicked, send a message to the app
+  //  when the button is clicked, send a message to the app
     document.getElementById('messageButton').onclick = function() {
             ThunkableWebviewerExtension.postMessage('hello world from Html');
     }
@@ -17,8 +17,8 @@
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       document.getElementById('messageDisplay').innerHTML = message;
-    });
-
+      });
+<Script> alert(message) </Script>
     // when we get a message from the app that needs a return value
     // return the string 'fast response' unless the message is
     // 'slow message'. If the message is 'slow message', wait for
