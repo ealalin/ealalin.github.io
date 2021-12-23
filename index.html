@@ -28,7 +28,23 @@
       alert(api_key_name);
 // ===================================Library===================================
       alert("library verder");
-
+      window.ml = cloudinary.createMediaLibrary({
+    cloud_name: 'ealalin2020',
+    api_key: '362758469977132',
+    username: 'ealalin1@gmail.com',
+    button_class: 'myBtn',
+    button_caption: 'Select Image or Video',
+    }, {
+    insertHandler: function (data) {
+    console.log("Hello World");
+    data.assets.forEach(asset => {
+    console.log("Inserted asset:",
+    JSON.stringify(asset, null, 2))
+    })
+    }
+    },
+    document.getElementById("open-btn")
+    )
 //=====================================end library =============================
       });
 
