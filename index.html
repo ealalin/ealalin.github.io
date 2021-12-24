@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-21 </button> 
+   <button type="button" id="messageButton">Click to start-22 </button> 
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -29,26 +29,23 @@
 // ===================================Library===================================
  //     alert("library verder");
 
-   window.ml = cloudinary.createMediaLibrary({
-  cloud_name: 'ealalin2020',
-  api_key: '362758469977132',
-  remove_header: true,
-  max_files: '1',
-  insert_caption: 'Insert',
-  inline_container: '#widget_container',
-  default_transformations: [
-    []
-  ],
-  button_class: 'myBtn',
-  button_caption: 'Select Image or Video'
-}, {
-  insertHandler: function (data) {
-    data.assets.forEach(asset => { console.log("Inserted asset:",
-      JSON.stringify(asset, null, 2)) })
+ window.ml = cloudinary.createMediaLibrary({
+    cloud_name: 'ealalin2020',
+    api_key: '362758469977132',
+    username: 'alain_linard@hotmail.com',
+    button_class: 'myBtn',
+    button_caption: 'Select Image or Video',
+    }, {
+    insertHandler: function (data) {
+    console.log("Hello World");
+    data.assets.forEach(asset => {
+    console.log("Inserted asset:",
+    JSON.stringify(asset, null, 2))
+    })
     }
-  },
-  document.getElementById("open-btn")
-);
+    },
+    document.getElementById("open-btn")
+    )
 //=====================================end library =============================
       });
 
