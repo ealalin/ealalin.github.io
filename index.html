@@ -47,9 +47,10 @@ window.ml = cloudinary.openMediaLibrary({
     cloud_name: 'ealalin2020',
     api_key: '362758469977132',
     remove_header: true,
+    max_files:'1',
+    inline_container:'#widget_container',
     username: 'alain_linard@hotmail.com',
     button_class: 'myBtn',
-    inline_container: '#widget_container',
     button_caption: 'Select Image or Video',
     }, {
     insertHandler: function (data) {
