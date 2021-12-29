@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-04 </button> 
+   <button type="button" id="messageButton">Click to start-01 </button> 
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -43,16 +43,15 @@
   </script>
    <script type="text/javascript">
 //========= New script to use thr Media Libery================
-window.ml = cloudinary.createMediaLibrary({
+window.ml = cloudinary.openMediaLibrary({
     cloud_name: 'ealalin2020',
     api_key: '362758469977132',
     remove_header: true,
     max_files:'1',
-  
  //   inline_container:'#widget_container',
-    default_transformations: [
-    []
-  ],
+ //   default_transformations: [
+ //   []
+ // ],
     username: 'alain_linard@hotmail.com',
     button_class: 'myBtn',
     button_caption: 'Select Image or Video',
@@ -65,7 +64,6 @@ window.ml = cloudinary.createMediaLibrary({
     })
     }
     },
-       showHandler: showHandlerFunction,
     document.getElementById("open-btn")
     )
 
