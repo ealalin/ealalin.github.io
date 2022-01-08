@@ -7,13 +7,12 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-
+    <button type="button" id="messageButton">Click to start-01 </button>
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
    <var> result </var>
-   <div id="widget_container"></div>
-  
+   
   </body>
  <script type="text/javascript">
   //  when the button is clicked, send a message to the app
@@ -25,8 +24,8 @@
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       let text = document.getElementById('messageDisplay').innerHTML = message;
       let result = text.substr(12, 27);
-      let api_key_name = result ;
- //     alert(api_key_name);
+      let api_key = result ;
+      alert(api_key);
 
       });
 
@@ -45,11 +44,13 @@
    <script type="text/javascript">
 //========= New script to use thr Media Libery================
 window.ml = cloudinary.openMediaLibrary({
-    cloud_name: cloud_name ,
-    api_key: api_key ,
+   //  cloud_name: 'ealalin2020',
+   cloud_name: cloud_name ,
+   // api_key: '362758469977132',
+   api_key: api_key ,
     remove_header: true,
     max_files:'1',
-     inline_container:'#widget_container',
+    inline_container:'#widget_container',
     username: 'alain_linard@hotmail.com',
     button_class: 'myBtn',
     button_caption: 'Select Image or Video',
