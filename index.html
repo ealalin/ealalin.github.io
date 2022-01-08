@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-    <button type="button" id="messageButton">Click to start-04 </button>
+    <button type="button" id="messageButton">Click to start-05 </button>
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -23,6 +23,7 @@
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       let text = document.getElementById('messageDisplay').innerHTML = message;
+      });
       let result = text.substr(01, 11);
       let cloud_name = result ;
       alert(cloud_name);
@@ -30,7 +31,6 @@
       let api_key = result ;
       alert(api_key);
 
-      });
 
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
       if (message === 'slow message') {
