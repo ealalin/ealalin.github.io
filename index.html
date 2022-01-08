@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-    <button type="button" id="messageButton">Click to start-05 </button>
+    <button type="button" id="messageButton">Click to start-06 </button>
    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
@@ -24,12 +24,12 @@
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       let text = document.getElementById('messageDisplay').innerHTML = message;
       });
-      let result = text.substr(01, 11);
-      let cloud_name = result ;
-      alert(cloud_name);
-      let result = text.substr(12, 27);
-      let api_key = result ;
-      alert(api_key);
+   //   let result = text.substr(01, 11);
+  //    let cloud_name = result ;
+  //    alert(cloud_name);
+  //    let result = text.substr(12, 27);
+  //    let api_key = result ;
+  //    alert(api_key);
 
 
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
@@ -47,7 +47,13 @@
    <script type="text/javascript">
 //========= New script to use thr Media Libery================
 window.ml = cloudinary.openMediaLibrary({
-   //  cloud_name: 'ealalin2020',
+  let result = text.substr(01, 11);
+     let cloud_name = result ;
+     alert(cloud_name);
+     let result = text.substr(12, 27);
+     let api_key = result ;
+     alert(api_key);
+  //  cloud_name: 'ealalin2020',
    cloud_name: cloud_name ,
    // api_key: '362758469977132',
    api_key: api_key ,
