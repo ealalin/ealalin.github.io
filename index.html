@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-03 </button>
+   <button type="button" id="messageButton">Click to start-04 </button>
   
    <var> cloud_name </var> 
    <var> api_key </var>
@@ -26,8 +26,18 @@
       let text = document.getElementById('messageDisplay').innerHTML = message;
       });
 
+    ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
+      if (message === 'slow message') {
+        setTimeout(() => callback('slow response'), 4000);
+      } else {
+        callback('fast response');
+      }
+    });
+   
+//   <iframe width="560" height="315" src="https://media-library-widget-demo.cloudinary.com/demo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       //--------------------------Cloudinary ------------------
-      <script type="text/javascript">
+ <script type="text/javascript">
 //========= New script to use thr Media Libery================
 window.ml = cloudinary.openMediaLibrary({
 //     let result = text.substr(01, 11);
@@ -63,19 +73,10 @@ window.ml = cloudinary.openMediaLibrary({
 
       //-------------------------end Cloudinary ---------------
 
-    ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
-      if (message === 'slow message') {
-        setTimeout(() => callback('slow response'), 4000);
-      } else {
-        callback('fast response');
-      }
-    });
-   
-//   <iframe width="560" height="315" src="https://media-library-widget-demo.cloudinary.com/demo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
   </script>
  
 
 
 </html>
+
