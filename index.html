@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-09 </button>
+   <button type="button" id="messageButton">Click to start-10 </button>
   
    <var> cloud_name </var> 
    <var> api_key </var>
@@ -25,7 +25,7 @@
     ThunkableWebviewerExtension.receiveMessage(function(message) {
       let text = document.getElementById('messageDisplay').innerHTML = message;
       });
-      if (message =<> 'slow message') { printf ('not slow message');}
+     
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
       if (message === 'slow message') {
         setTimeout(() => callback('slow response'), 4000);
