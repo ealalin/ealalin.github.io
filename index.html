@@ -44,8 +44,8 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton"> 1) Click to start-04 </button>
-   <button type="button" onclick="myFunction()"> 2) Click to continue-04 </button>
+   <button type="button" id="messageButton"> 1) Click to start-05 </button>
+   <button type="button" onclick="myFunction()"> 2) Click to continue-05 </button>
     <p id="demo">Naar Library</p>
    <var> cloud_name </var> 
    <var> api_key </var>
@@ -82,12 +82,16 @@
   function myFunction() {
   text = ('ealalin2020;362758469977132');
   document.getElementById("demo").innerHTML = "test before the if";
-if (text == 'ealalin2020;362758469977132') {
+    if (text === 'ealalin2020;362758469977132') {
     document.getElementById("demo").innerHTML = "text is defined";
     } Else {
 
-             document.getElementById("demo").innerHTML = "text not  defined";
+             document.getElementById("demo").innerHTML = "text defined";
+           } else{
+            document.getElementById("demo").innerHTML = "text not  defined";
+
            }
+
 //  window.alert(text);
 //  let result = text.substr(0, 10);
 //  window.alert(result);
