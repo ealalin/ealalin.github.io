@@ -44,8 +44,8 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton"> 1) Click to start-20 </button>
-   <button type="button" onclick="myFunction()"> 2) Click to continue-20 </button>
+   <button type="button" id="messageButton"> 1) Click to start-01 </button>
+   <button type="button" onclick="myFunction()"> 2) Click to continue-01 </button>
     <p id="demo">Naar Library</p>
    <var> cloud_name </var> 
    <var> api_key </var>
@@ -62,7 +62,7 @@
 
     // when we get a message from the app, display it on the page
     ThunkableWebviewerExtension.receiveMessage(function(message) {
-      let text = document.getElementById('messageDisplay').innerHTML = message;
+       text = document.getElementById('messageDisplay').innerHTML = message;
       });
 
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
@@ -80,95 +80,7 @@
  
 <script type="text/javascript">
   function myFunction() {
- 
- //let text = ("ealalin2020;362758469977132");
-if (text === undefined) {
-  document.getElementById("demo").innerHTML = "text not defined";
-   } else{
-    <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://thunkable.github.io/webviewer-extension/thunkableWebviewerExtension.js" type="text/javascript"></script>
-    <script src="https://media-library.cloudinary.com/global/all.js" type="text/javascript"></script>
-   
-    <script type="text/javascript">
-      //========= New script to use thr Media Libery================
-        window.ml = cloudinary.openMediaLibrary({
-      //     let result = text.substr(01, 11);
-      //     let cloud_name = result ;
-      //    Window.alert(cloud_name);
-      //     let result = text.substr(12, 27);
-       //    let api_key = result ;
-        //  window.alert(api_key);
-        //  cloud_name: 'ealalin2020',
-        // cloud_name: cloud_name ,
-         // window.api_key: '362758469977132',
-        // api_key: api_key ,
-          remove_header: true,
-          max_files:'1',
-          inline_container:'#widget_container',
-          username: 'alain_linard@hotmail.com',
-          button_class: 'myBtn',
-          button_caption: 'Select Image or Video',
-          }, {
-          insertHandler: function (data) {
-          console.log("Hello World");
-          data.assets.forEach(asset => {
-          console.log("Inserted asset:",
-          JSON.stringify(asset, null, 2))
-          })
-          }
-          },
-          document.getElementById("open-btn")
-          )
-      
-      // =========End Media library ================================
-         </script>
-    
-   
-    
-  </head>
-  <body>
-    <span id="messageDisplay"></span>
-    <br />
-   <button type="button" id="messageButton"> 1) Click to start-22 </button>
-   <button type="button" onclick="myFunction()"> 2) Click to continue-22 </button>
-    <p id="demo">Naar Library</p>
-   <var> cloud_name </var> 
-   <var> api_key </var>
-   <var> text </var>
-   <var> result </var>
-   <var> result02 </var>
-   <div id="widget_container"></div>
-  </body>
- <script type="text/javascript">
-  //  when the button is clicked, send a message to the app
-    document.getElementById('messageButton').onclick = function() {
-            ThunkableWebviewerExtension.postMessage('hello world from Html');
-    }
-
-    // when we get a message from the app, display it on the page
-    ThunkableWebviewerExtension.receiveMessage(function(message) {
-      let text = document.getElementById('messageDisplay').innerHTML = message;
-      });
-
-    ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
-      if (message === 'slow message') {
-        setTimeout(() => callback('slow response'), 4000);
-      } else {
-        callback('fast response');
-      }
-    });
-   
-//   <iframe width="560" height="315" src="https://media-library-widget-demo.cloudinary.com/demo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
- 
-  </script>
- 
-<script type="text/javascript">
-  function myFunction() {
- 
- //let text = ("ealalin2020;362758469977132");
+  //let text = ("ealalin2020;362758469977132");
 if (text == undefined) {
     document.getElementById("demo").innerHTML = "text not defined";
     } Else {
