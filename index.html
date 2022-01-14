@@ -44,10 +44,9 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton"> 1) Click to start-06 </button>
-   <button type="button" onclick="myFunction()"> 2) Click to continue-06 </button>
-  //  <p id="demo">Naar Library</p>
-    <p id="demo"></p>
+   <button type="button" id="messageButton"> 1) Click to start-07 </button>
+   <button type="button" onclick="myFunction()"> 2) Click to continue-07 </button>
+   <p id="demo"></p>
 
     <var> cloud_name </var> 
    <var>  api_key  </var>
@@ -81,7 +80,6 @@
   </script>
  
 <script type="text/javascript">
-  result = '123456';
   function myFunction() {
     try {
       text = 'ealalin2020;362758469977132';
@@ -91,7 +89,7 @@
         }
       window.alert(text);
       try {
-           result = text.substr(0, 10);
+          let result = text.substr(0, 10);
         }
         catch(err) {
         document.getElementById("demo").innerHTML = err.message;
