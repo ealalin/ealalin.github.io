@@ -44,10 +44,12 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton"> 1) Click to start-04 </button>
-   <button type="button" onclick="myFunction()"> 2) Click to continue-04 </button>
-    <p id="demo">Naar Library</p>
-   <var> cloud_name </var> 
+   <button type="button" id="messageButton"> 1) Click to start-05 </button>
+   <button type="button" onclick="myFunction()"> 2) Click to continue-05 </button>
+  //  <p id="demo">Naar Library</p>
+    <p id="demo"></p>
+
+    <var> cloud_name </var> 
    <var> api_key </var>
    <var> text </var>
    <var> result </var>
@@ -88,13 +90,13 @@
         }
       window.alert(text);
       try {
-        let result = text.substr(0, 10);
+         result = text.substr(0, 10);
         }
         catch(err) {
         document.getElementById("demo").innerHTML = err.message;
         }
      window.alert(result);
-     let cloud_name = result ;
+     cloud_name = result ;
      alert(cloud_name);
      let result = text.substr(12, 26);
      let api_key = result ;
