@@ -7,7 +7,7 @@
   <body>
     <span id="messageDisplay"></span>
     <br />
-   <button type="button" id="messageButton">Click to start-07 </button>
+   <button type="button" id="messageButton">Click to start-01 </button>
    <p id="demo"></p>
 
    <var> cloud_name </var> 
@@ -56,7 +56,13 @@ window.ml = cloudinary.openMediaLibrary({
     remove_header: true,
     max_files:'1',
     inline_container:'#widget_container',
-    username: 'alain_linard@hotmail.com',
+  //  username: 'alain_linard@hotmail.com',
+    try {
+      username: 'alain_linard@hotmail.com',
+       }
+   catch(err) {
+      document.getElementById("demo").innerHTML = err.message;
+       }
     button_class: 'myBtn',
     button_caption: 'Select Image or Video',
     }, {
